@@ -7,8 +7,97 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <form enctype="multipart/form-data" action="index.html" method="get">
+    <form enctype="multipart/form-data" action="https://formtester.goodbytes.be/post.php" method="post">
         <!-- FORM FIELDS HERE -->
+        <fieldset>
+            <legend>Personal information</legend>
+            <div class="field">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name." required>   
+            </div>
+            <div class="field">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email." required>
+            </div>
+            <div class="field">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" pattern="[a-zA-Z0-9]{12}" placeholder="Enter your password." required>
+            </div>
+            <div class="field">
+                <label for="birth">Date of Birth:</label>
+                <input type="date" id="birth" name="birth" required>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Preferences</legend>
+            <div class="field">
+                <label for="color">Favorite Color:</label>
+                <input type="color" id="color" name="color" required>
+            </div>
+            <div class="field">
+                <label for="hobby">Hobby:</label>
+                <input type="text" id="hobby" name="hobby" list="hobbies" required>
+                <datalist id="hobbies">
+                    <option value="Drawing"></option>
+                    <option value="Swimming"></option>
+                    <option value="Dancing"></option>
+                </datalist>
+            </div>
+            <div class="field">
+                <label for="level">Experience Level:</label>
+                <input type="range" id="level" name="experience_level" required>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Contact Preferences</legend>
+            <div class="field">
+                <label for="contact_method">Preferred Contact Method:</label>
+                <select name="contact_method" id="contact_method" required>
+                    <option value="Email">Email</option>
+                    <option value="Phone">Phone</option>
+                    <option value="Mail">Mail</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="checkbox">Subscribe to Newsletter:</label>
+                <input type="checkbox" id="checkbox">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Preferences</legend>
+            <div class="field">
+                <label for="gender">Gender:</label>
+                </br>
+                <input type="radio" id="male" value="Male" name="gender">
+                <label for="male">Male</label>
+                <input type="radio" id="female" value="Female" name="gender">
+                <label for="female">Female</label>
+                <input type="radio" id="other" value="Other" name="gender">
+                <label for="other">Other</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>More Information</legend>
+            <div class="field">
+                <label for="message ">Bio:</label>
+                <textarea name="message" id="message"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Upload Documents</legend>
+            <div class="field">
+                <label for="file">Resume and other certificates:</label>
+                <input type="file" name="file" id="file" accept=".doc, .docx, .pdf, .jpg, .png">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Submission</legend>
+            <div class="field_button">
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>    
+            </div>
+        </fieldset>
     </form>
 </body>
 </html>
