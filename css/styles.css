@@ -13,4 +13,37 @@ form {
   margin: 20px auto;
 }
 
+fieldset {
+  border-radius: 5px;
+  padding: 10px;
+  margin: 15px;
+}
+
+fieldset legend {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.check {
+  align-items: flex-start;
+}
+
+.gender {
+  align-items: flex-start;
+}
+
+button {
+  background: rgb(1, 149, 218);
+  color: white;
+  padding: 10px 15px 10px 15px;
+  border: none;
+  border-radius: 5px;
+}
+
 /*# sourceMappingURL=styles.css.map */
